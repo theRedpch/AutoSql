@@ -1,2 +1,5 @@
 # AutoSql
-Script realizado para automatizar la tarea de sqlmap y realizar la instalacion automatica.
+Script realizado para:
+[1]Realizar la instalacion de sqlmap
+[2]Encontrar paginas vulnerables a sqlmap (dorks en el documento dorks.txt)
+[3]Automatizar el proceso de realizar atques con sqlmap
