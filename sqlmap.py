@@ -23,15 +23,15 @@ if select == 1:
 	
 if select ==2:
 	import random
-lines = open('dorks.txt').read().splitlines()
-myline =random.choice(lines)
-print(myline)
+	lines = open('dorks.txt').read().splitlines()
+	myline =random.choice(lines)
+	print(myline)
 
 
-term = (myline)
+	term = (myline)
 
-for i in search(term, num_results=50, lang='es'):
-	print(i)
+	for i in search(term, num_results=50, lang='es'):
+		print(i)
 
 	
 if select ==3:
@@ -59,7 +59,7 @@ if select ==3:
 
 	ubprocess.run(['sqlmap', '-u', web,'-D', base,'-T', columna, '-C', valor_valor, '-dump' ])
 
-if select >4:
+if select >=4:
 	print('Opcion no valida')
 
 
